@@ -97,5 +97,4 @@ Enterprise RAG systems have matured from single-stage vector lookup into multi-l
 ---
 
 ## Generated Concept Image
-
-![RAG Knowledge Vault Concept](../../assets/images/rag-knowledge-vault.png)
+![RAG Knowledge Vault Concept](../../assets/images/rag-knowledge-vault.jpg)
