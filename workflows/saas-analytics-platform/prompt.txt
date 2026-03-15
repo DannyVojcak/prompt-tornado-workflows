@@ -1,41 +1,42 @@
 Design a SaaS analytics utility that helps founders and operators monitor business performance.
 
 The system should:
-
 1) Define the core SaaS metrics the tool would track
    (examples: MRR, churn, CAC, LTV, retention cohorts, expansion revenue)
-
 2) Explain how the analytics engine would project revenue growth
    using inputs such as:
    - customer acquisition rate
    - churn rate
    - pricing tiers
    - expansion revenue
-
 3) Identify the most important business risks the system should detect early,
    such as:
    - churn spikes
    - declining activation rates
    - CAC payback deterioration
    - revenue concentration risk
+4) Provide a simple Python example showing how the system could calculate
+   Monthly Recurring Revenue (MRR), churn rate, and LTV from raw customer data.
+5) Generate a visual concept of the SaaS analytics dashboard that founders
+   would use to monitor these metrics.
 
 Output requirements:
-
 Produce the result using EXACTLY these sections:
-
-A) Core SaaS Metrics Framework
+A) Core SaaS Metrics Framework  
 (8–10 bullets defining key SaaS metrics)
-
-B) Revenue Projection Model
+B) Revenue Projection Model  
 (2–3 paragraphs explaining the model, including formula-style explanations)
-
-C) Early Warning Risk Signals
+C) Early Warning Risk Signals  
 (exactly 6 bullets describing business risks the system should detect)
-
-D) Product Feature Blueprint
+D) Product Feature Blueprint  
 (exactly 5 bullets describing how the SaaS analytics utility should work)
+E) Example Analytics Code  
+(a short Python code snippet demonstrating MRR / churn calculations)
 
 Formatting rules:
 - Keep writing concise and operator-focused.
 - Do not add extra headings.
 - Do not omit any required section.
+
+IMAGE:
+A cinematic visualization of a modern SaaS analytics control room with large dashboard screens displaying revenue charts, churn graphs, cohort analysis, and KPI metrics. Blue lighting, sleek futuristic interface, glass displays, ultra detailed, photorealistic, 8K.
