@@ -1,0 +1,88 @@
+Research how modern enterprises design Retrieval-Augmented Generation (RAG) systems as of 2025–2026.
+
+Source quality requirements:
+Prioritize primary and highly credible technical sources from the last 18–24 months.
+
+Preferred source types:
+- Official engineering documentation
+- Official product architecture blogs
+- Technical deep-dive posts by framework maintainers
+- Peer-reviewed research papers or arXiv papers
+- Reputable institutional research organizations
+
+Prioritize sources from organizations such as:
+- LangChain / LangGraph
+- LlamaIndex
+- AWS
+- Microsoft Azure
+- Google Cloud
+- Anthropic
+- OpenAI
+- Pinecone
+- Weaviate
+- Elastic
+- Stanford HAI
+- arXiv
+
+Avoid:
+- SEO blog roundups
+- marketing comparison lists
+- low-substance vendor content
+- unsupported opinion pieces
+
+If strong evidence is insufficient for any claim, say so explicitly rather than filling with weak sources.
+
+Research goals:
+
+1) Identify key architecture patterns used in enterprise RAG systems, including:
+- document ingestion pipelines
+- chunking strategies
+- embedding models
+- vector databases
+- hybrid search (BM25 + vector)
+- cross-encoder reranking
+- retrieval orchestration
+
+2) Identify common infrastructure components, including:
+- vector databases (Pinecone, Weaviate, pgvector, etc.)
+- search systems
+- orchestration frameworks
+- evaluation pipelines
+- observability tooling
+
+3) Identify common enterprise challenges such as:
+- hallucination mitigation
+- retrieval quality
+- cost control
+- latency optimization
+- governance and data security
+- evaluation and benchmarking
+
+Output requirements:
+
+Produce an executive-ready architecture brief using EXACTLY these headings:
+
+A) Executive Summary (exactly 8 sentences)
+
+B) Core RAG Architecture Patterns (exactly 5 bullets)
+
+C) Infrastructure Stack Landscape
+(6–8 bullets formatted exactly as:
+"Technology — role in the architecture — proof point")
+
+D) Enterprise Implementation Challenges (exactly 6 bullets)
+
+E) Strategic Design Recommendations
+(exactly 3 bullets, each begins with a strong verb)
+
+F) Sources (8–10 items, each a specific article/doc/paper URL — never a blog root or category page)
+
+Formatting rules:
+- Keep writing concise, technical, and evidence-based
+- Do not include filler
+- Do not include headings outside A–F
+- Do not omit any required section
+- If evidence is weak for a claim, say so explicitly
+
+IMAGE:
+A cinematic wide-angle concept art scene of a massive underground data vault storing humanity's knowledge. Towering shelves of glowing data crystals and holographic documents stretch into darkness. Autonomous AI agents made of light move between aisles retrieving information. In the center, a radiant retrieval engine projects beams of data toward a central intelligence core. Deep shadows, volumetric light rays, dramatic scale, photorealistic lighting, ultra-detailed, 8K, award-winning sci-fi concept art.
