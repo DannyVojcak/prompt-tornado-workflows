@@ -1,0 +1,29 @@
+A company is preparing to launch a new product internationally.
+
+Original English announcement:
+"We’re excited to introduce Prompt Tornado, a platform that allows teams to run complex AI workflows from a single prompt while maintaining full transparency into every step."
+
+Target language: Spanish
+Target audience: Global / international
+
+Tasks:
+
+1) Localize the announcement
+Rewrite the announcement in Spanish so it sounds natural, professional, and appropriate for a global product launch.
+Do NOT translate word-for-word. Prioritize clarity, tone, and marketing impact.
+
+2) Adapt tone for launch marketing
+Create shorter launch-ready versions suitable for:
+- a product launch video
+- a social media announcement
+
+3) Generate an audio version
+Create a spoken Spanish voiceover suitable for narration.
+Keep the audio under 20 seconds with a confident, neutral professional voice.
+Target audio duration: 12–20 seconds.
+
+Final Output Format:
+A) Spanish Launch Announcement
+B) Launch Video Script (Spanish)
+C) Social Media Version (Spanish)
+D) Audio Output
