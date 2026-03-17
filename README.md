@@ -4,13 +4,15 @@ This repository contains example workflows built with **Prompt Tornado**, an AI 
 
 Prompt Tornado acts as the **control plane for AI workflows**, enabling teams to run reliable AI systems instead of isolated prompts.
 
-## Demo
+## Prompt Tornado Demo
 
-Watch a short walkthrough of Prompt Tornado in action:
+See how Prompt Tornado turns a single prompt into a structured, multi-step AI workflow executed across multiple models and providers.
 
-https://www.loom.com/share/b8511490d50c4fe8bf8f5a805fbf2cd4
+▶ Watch the demo:
 
-This demo shows how Prompt Tornado turns a single prompt into a multi-step workflow executed across multiple AI models and providers.
+[![Prompt Tornado Demo](https://img.youtube.com/vi/JU4CvqaB7us/maxresdefault.jpg)](https://youtu.be/JU4CvqaB7us)
+
+---
 
 Instead of manually coordinating multiple AI tools, Prompt Tornado:
 
