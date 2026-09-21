@@ -110,4 +110,4 @@ print("LTV:", ltv)
 
 # Generated Concept Image
 
-![SaaS Analytics Dashboard Concept](../../assets/images/saas-analytics-control-room.jpg)
+![SaaS Analytics Dashboard Concept](../../../assets/images/saas-analytics-control-room.jpg)

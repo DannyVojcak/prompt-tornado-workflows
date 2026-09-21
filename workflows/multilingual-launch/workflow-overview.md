@@ -1,44 +1,31 @@
-# Multilingual Product Launch Workflow
+# Multilingual Product Launch
 
-This workflow demonstrates how Prompt Tornado can orchestrate localization and marketing content generation for international product launches.
+Localize a product announcement into Spanish, create launch marketing versions, and generate a professional voiceover.
 
-A single prompt triggers multiple coordinated tasks including translation, marketing copy adaptation, and audio generation.
+This is one of the four workflows in the Prompt Tornado **Examples gallery**, and the public demo at
+https://app.prompt-tornado.com/demo runs the same prompt with the same steps.
 
-## What this workflow demonstrates
+## Steps
 
-- multilingual content generation
-- marketing copy adaptation
-- structured output formatting
-- multi-step AI orchestration
-- multimodal output (text + audio)
+| # | Step | What it does | Model that ran it |
+|---|---|---|---|
+| 1 | Writing | Using the English product announcement in the user prompt, produce section A of the output: A) Spanish Launch Announcement — Write a complete, polished Spanish localization of the announcement. | `anthropic/claude-opus-5` |
+| 2 | Writing | Using the Spanish launch announcement from the previous step, produce sections B, C and D: B) Launch Video Script (Spanish) — 2–3 short sentences of spoken narration for a product launch video. | `anthropic/claude-sonnet-5` |
+| 3 | Voiceover | Generate a spoken Spanish voiceover of the launch video script. | `openai/gpt-4o-mini-tts` |
+| 4 | Image | A cinematic global product launch event on a dramatic stage, illuminated by deep blue and gold lighting, with volumetric light beams cutting through a dark auditorium. | `fal_ai/fal-ai/flux/schnell` |
 
-## Example Steps
+The models are chosen per step by Prompt Tornado's router, so they can change as routing is
+updated. The column shows the production run the sample output came from (2026-09-21, total model
+cost $0.07).
 
-1. **Task Classification**
-   - Detect localization, marketing content, and audio generation tasks.
+## How the steps connect
 
-2. **Localization Step**
-   - Rewrite the original announcement in natural Spanish suitable for global audiences.
+- Step 1 starts from the prompt.
+- Step 2 uses the output of step 1.
+- Step 3 uses the output of step 2.
+- Step 4 starts from the prompt.
 
-3. **Marketing Adaptation**
-   - Produce a shorter launch video script and social media announcement.
+## Files
 
-4. **Audio Generation**
-   - Generate a Spanish narration suitable for a launch video.
-
-5. **Unified Output**
-   - Combine the localized text, marketing copy, and audio output into a structured response.
-
-## Example Pipeline
-
-Prompt  
-↓  
-Task Classification  
-↓  
-Localization Agent  
-↓  
-Marketing Content Agent  
-↓  
-Audio Generation Agent  
-↓  
-Unified Output
+- `prompt.txt`: the exact prompt.
+- `sample-output.md`: the text output of that run, unedited.

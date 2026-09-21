@@ -1,29 +1,60 @@
 A company is preparing to launch a new product internationally.
 
 Original English announcement:
-"We’re excited to introduce Prompt Tornado, a platform that allows teams to run complex AI workflows from a single prompt while maintaining full transparency into every step."
+"We're excited to introduce Prompt Tornado, a platform that allows teams to run complex AI workflows from a single prompt while maintaining full transparency into every step."
 
 Target language: Spanish
 Target audience: Global / international
 
-Tasks:
+Produce FOUR deliverables. They are going to four different places — a press page, a launch video, a social feed, and a narrator's booth — so they must read as four different pieces of writing, not one paragraph reformatted four times.
 
-1) Localize the announcement
-Rewrite the announcement in Spanish so it sounds natural, professional, and appropriate for a global product launch.
-Do NOT translate word-for-word. Prioritize clarity, tone, and marketing impact.
+VARIETY REQUIREMENT (the hardest part of this task):
+- Each section must OPEN differently. No two sections may begin with the same word or construction.
+- Each section must lead with a DIFFERENT angle. Choose a different entry point per section — for example the problem being solved, the capability itself, the outcome for the team, or the moment of launch.
+- Do not use the same signature phrase as the hook in more than one section. It may reappear once as supporting detail, never twice as the lead.
 
-2) Adapt tone for launch marketing
-Create shorter launch-ready versions suitable for:
-- a product launch video
-- a social media announcement
+SECTION REQUIREMENTS:
 
-3) Generate an audio version
-Create a spoken Spanish voiceover suitable for narration.
-Keep the audio under 20 seconds with a confident, neutral professional voice.
-Target audio duration: 12–20 seconds.
-
-Final Output Format:
 A) Spanish Launch Announcement
+- 2–4 sentences
+- Register: measured, institutional, press-release Spanish
+- Suitable for a real international product launch
+
 B) Launch Video Script (Spanish)
+- 2–3 short sentences
+- Register: cinematic and energetic — short clauses, forward motion
+- Written to be heard over visuals, not read on a page
+
 C) Social Media Version (Spanish)
-D) Audio Output
+- 1–2 sentences maximum
+- Register: conversational and punchy
+- 1–2 tasteful emojis maximum, no hashtags
+
+D) Voiceover Script (Spanish)
+- EXACTLY 40–55 words. Count them before finalizing.
+- Register: warm, confident, neutral-professional narration
+- Complete flowing sentences — no bullets, no labels, no headers inside the body
+- Must sound finished when spoken aloud, not truncated
+
+RULES:
+- Write polished, launch-ready Spanish. Do NOT translate word-for-word; prioritize clarity, tone and marketing impact.
+- Output ONLY sections A, B, C and D, using the exact headings below.
+- No preamble, no commentary, no translation notes, no markdown separators, no text before A or after D.
+- Avoid generic corporate filler.
+
+Return your response EXACTLY in this format:
+
+A) Spanish Launch Announcement
+<text>
+
+B) Launch Video Script (Spanish)
+<text>
+
+C) Social Media Version (Spanish)
+<text>
+
+D) Voiceover Script (Spanish)
+<text>
+
+IMAGE:
+A cinematic global product launch event on a dramatic stage, illuminated by deep blue and gold lighting, with volumetric light beams cutting through a dark auditorium. A massive abstract holographic installation floats above the stage, symbolizing global AI workflows. A diverse international audience watches in awe. Ultra-realistic, cinematic composition, shallow depth of field, dramatic lighting, premium sci-fi realism, no readable text, no logos, no UI, no watermarks.
