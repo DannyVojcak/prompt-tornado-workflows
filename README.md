@@ -1,225 +1,71 @@
 # Prompt Tornado Workflow Examples
 
-This repository contains example workflows built with **Prompt Tornado**, an AI orchestration platform that turns a single prompt into a structured, multi-step workflow executed across models and tools.
+Example workflows for **[Prompt Tornado](https://www.prompt-tornado.com)**, a control plane for
+multi-model AI workflows.
 
-Prompt Tornado acts as the **control plane for AI workflows**, enabling teams to run reliable AI systems instead of isolated prompts.
+You describe what you want in one prompt. Prompt Tornado plans the steps, sends each step to the
+model best suited to it, and returns one finished result: text, images, audio or code. Around every
+run sits a control layer:
 
-## 🚀 Try the Live Demo
+- **Spend caps:** a monthly limit that blocks or warns before you overspend.
+- **Governance:** which models and regions your data may go to.
+- **Approval for risky actions** before they run.
+- **A full record** of what ran, which model ran it, and what it cost, exportable as evidence.
 
-Try Prompt Tornado in action (no signup required):
-https://app.prompt-tornado.com/demo
+## Try it
 
----
+- **Live demo, no sign-up:** https://app.prompt-tornado.com/demo runs the four workflows below.
+- **The app:** https://app.prompt-tornado.com. The Free plan includes 10 runs a month.
 
-## 🌪️ Prompt Tornado Demo Video
-
-See how Prompt Tornado turns a single prompt into a structured, multi-step AI workflow executed across multiple models and providers.
-
-▶ Watch the demo:
+▶ **Demo video**
 
 [![Prompt Tornado Demo](https://img.youtube.com/vi/JU4CvqaB7us/maxresdefault.jpg)](https://youtu.be/JU4CvqaB7us)
 
 ---
 
-Instead of manually coordinating multiple AI tools, Prompt Tornado:
+## The four example workflows
 
-- classifies tasks inside a prompt
-- routes each step to the best model or tool
-- executes the workflow automatically
-- returns a unified output across formats (text, code, images, audio, etc.)
+These are the workflows in the app's Examples gallery, with the exact prompts and step plans it runs.
+Each folder holds the prompt, an overview of the steps, and the unedited text output of a real
+production run.
 
----
+| Workflow | What it shows | Steps | Models in the sample run | Sample run cost |
+|---|---|---|---|---|
+| [Multilingual Product Launch](workflows/multilingual-launch/) | One announcement becomes four distinct Spanish deliverables: press copy, a video script, a social post and a voiceover script. Plus a narrated voiceover and a launch visual. | 4 | Claude Opus 5, Claude Sonnet 5, OpenAI TTS, FLUX (fal.ai) | $0.07 |
+| [Vendor Decision Briefing](workflows/vendor-decision-briefing/) | Web research on three help-desk vendors, handed down a chain: a structured comparison, a risk review, a decision memo and a five-slide briefing. | 6 | Perplexity, GPT-5.5, GPT-5.6 Sol, Claude Opus 5, FLUX (fal.ai) | $0.58 |
+| [Support Inbox Action Plan](workflows/support-inbox-action-plan/) | Eight support tickets triaged against an approved policy, including one that tries to override it, then structured ticket records, reply drafts and a manager's action brief. Nothing is sent: every reply is a draft. | 4 | Claude Opus 5, GPT-5.5, Claude Haiku 4.5 | $0.12 |
+| [Billing Bug Fix & Independent Review](workflows/billing-bug-fix/) | Diagnose a revenue bug, patch it, write regression tests, then have a second vendor's model review the fix. The tests are written, not run. | 4 | GPT-5.6 Sol, Claude Opus 5 | $0.29 |
 
-# What is Prompt Tornado?
+Models are chosen per step by the router, so a run today may use different ones. Each overview
+lists the model that ran every step of its sample.
 
-Most AI tools return a single response from one model.
+## Calling it from code
 
-Prompt Tornado breaks complex prompts into **structured workflows** that may include:
+Runs can be started and fetched over the REST API with a personal API key created in the app. A
+Python SDK exists but is not yet published to PyPI.
 
-- research
-- summarization
-- code generation
-- image generation
-- translation
-- audio generation
-- data analysis
-
-Each step is routed to the most appropriate model and executed as part of a coordinated workflow.
-
-Learn more:
-
-https://www.prompt-tornado.com
-
-Try the platform:
-
-https://app.prompt-tornado.com
-
----
-
-# Example Workflows
-
-This repository includes several example workflows demonstrating how Prompt Tornado turns a single prompt into a structured execution pipeline.
-
----
-
-## RAG Research Workflow
-
-Research a technical topic, synthesize credible sources, and produce an executive-ready architecture brief.
-
-This workflow demonstrates:
-
-- structured research
-- evidence-based summarization
-- technical architecture analysis
-- concept visualization via image generation
-
-Location:
-
-```
-workflows/rag-research/
-```
-
----
-
-## Multilingual Product Launch Workflow
-
-Generate international launch messaging and audio narration for global audiences.
-
-This workflow demonstrates:
-
-- localization and transcreation
-- marketing copy generation
-- audio generation
-- multi-format workflow outputs
-
-Location:
-
-```
-workflows/multilingual-launch/
-```
-
----
-
-## SaaS Analytics Platform Design Workflow
-
-Design a SaaS analytics utility that helps founders and operators monitor business performance.
-
-This workflow demonstrates:
-
-- structured product and business reasoning
-- SaaS metrics framework design
-- Python code generation for analytics calculations
-- dashboard visualization via image generation
-
-Location:
-
-```
-workflows/saas-analytics-platform/
-```
-
----
-
-# Example Prompt
-
-Example workflow input:
-
-```
-Design a SaaS analytics utility that helps founders and operators monitor business performance.
-
-The system should:
-
-1) Define the core SaaS metrics the tool would track
-2) Explain how the analytics engine would project revenue growth
-3) Identify the most important business risks the system should detect early
-4) Provide a Python example for calculating MRR, churn rate, and LTV
-5) Generate a visualization of the analytics dashboard
-
-Output sections:
-
-A) Core SaaS Metrics Framework  
-B) Revenue Projection Model  
-C) Early Warning Risk Signals  
-D) Product Feature Blueprint  
-E) Example Analytics Code
-```
-
-Prompt Tornado automatically converts this into a **multi-step AI workflow**.
-
----
-
-# Why Prompt Tornado?
-
-AI workflows are becoming increasingly complex.
-
-Teams increasingly need:
-
-- multi-model orchestration
-- workflow observability
-- execution tracing
-- cost tracking
-- deterministic workflows
-- governance and evaluation
-
-Prompt Tornado provides the **control plane for AI workflows**, making it possible to run complex AI systems reliably in production.
-
----
-
-# Repository Structure
+## Repository structure
 
 ```
 prompt-tornado-workflows
-│
 ├── README.md
-│
-├── assets
-│   ├── audio
-│   └── images
-│
-└── workflows
-    ├── rag-research
+├── assets/
+└── workflows/
+    ├── multilingual-launch/
+    ├── vendor-decision-briefing/
+    ├── support-inbox-action-plan/
+    ├── billing-bug-fix/
     │   ├── prompt.txt
     │   ├── workflow-overview.md
     │   └── sample-output.md
-    │
-    ├── multilingual-launch
-    │   ├── prompt.txt
-    │   ├── workflow-overview.md
-    │   └── sample-output.md
-    │
-    └── saas-analytics-platform
-        ├── prompt.txt
-        ├── workflow-overview.md
-        └── sample-output.md
+    └── retired/                 earlier examples, no longer in the app
 ```
 
-Each workflow folder contains:
+## Contributing
 
-- the example prompt
-- workflow explanation
-- sample output generated by Prompt Tornado
+Workflow ideas and examples are welcome. Open a pull request with the prompt, a short overview of
+the steps, and a sample output.
 
----
-
-# Contributing
-
-Community contributions and additional workflow examples are welcome.
-
-If you create interesting Prompt Tornado workflows, feel free to open a pull request with:
-
-- the workflow prompt
-- a workflow overview
-- sample outputs
-
-Example categories that could be useful additions:
-
-- AI research workflows
-- data analysis workflows
-- marketing automation workflows
-- developer tooling workflows
-- AI-powered operations workflows
-
----
-
-# License
+## License
 
 This repository is provided for educational and demonstration purposes.

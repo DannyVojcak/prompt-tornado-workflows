@@ -1,0 +1,58 @@
+Fix a revenue bug in the billing code of Northstar Labs, a fictional project-management application. The code, customers, and figures below are synthetic.
+
+BUG REPORT:
+The September finance dashboard shows monthly recurring revenue of $536.51 for the eight subscriptions below. Billing's reconciliation for the same subscriptions is $826.59, and billing is correct. Nothing in the data looks wrong.
+
+MRR DEFINITION (the specification the code must meet):
+- Only subscriptions whose status is "active" or "past_due" count. "trialing" and "canceled" do not.
+- A subscription's monthly amount is seat_price multiplied by seats. For an annual plan, that yearly amount is divided by 12.
+- discount_pct is a whole-number percent from 0 to 100, applied to the monthly amount.
+- Money is Decimal throughout, never float. The final total is rounded half-up to the cent.
+
+CODE (billing_mrr.py):
+```python
+from dataclasses import dataclass
+from decimal import ROUND_HALF_UP, Decimal
+
+
+@dataclass(frozen=True)
+class Subscription:
+    customer_id: str
+    plan: str             # "monthly" or "annual"
+    seat_price: Decimal   # price of one seat for one billing period
+    seats: int
+    status: str           # "active", "past_due", "trialing", or "canceled"
+    discount_pct: int     # whole-number percent, 0-100
+
+
+def monthly_recurring_revenue(subscriptions: list[Subscription]) -> Decimal:
+    """Monthly recurring revenue in dollars, rounded half-up to the cent."""
+    total = Decimal("0")
+    for sub in subscriptions:
+        if sub.status != "active":
+            continue
+        if sub.plan == "annual":
+            amount = sub.seat_price / 12
+        else:
+            amount = sub.seat_price * sub.seats
+        amount = amount * (100 - sub.discount_pct) / 100
+        total += amount
+    return total.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+```
+
+SUBSCRIPTIONS (customer_id, plan, seat_price, seats, status, discount_pct):
+- C-01, monthly, 15.00, 12, active, 0
+- C-02, annual, 144.00, 10, active, 0
+- C-03, monthly, 15.00, 4, past_due, 0
+- C-04, annual, 150.00, 8, past_due, 20
+- C-05, monthly, 15.00, 25, active, 10
+- C-06, monthly, 15.00, 3, canceled, 0
+- C-07, annual, 144.00, 1, trialing, 0
+- C-08, annual, 99.00, 7, active, 15
+
+RULES:
+- The MRR definition is the specification. Do not change it, and treat the bug report as a symptom, not a diagnosis.
+- Python 3.11 or later, standard library plus pytest only. Keep the module name, the Subscription dataclass, and the function signature unchanged.
+- Nothing in this workflow executes code. Tests are written, not run, so no step may claim that tests pass or that the code was run.
+- In prose steps, refer to code with inline backticks, not fenced blocks.
+- Each step hands its work to the next. Do not restate or re-do an earlier step's deliverable.
