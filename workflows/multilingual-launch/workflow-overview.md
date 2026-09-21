@@ -11,7 +11,7 @@ https://app.prompt-tornado.com/demo runs the same prompt with the same steps.
 |---|---|---|---|
 | 1 | Writing | Using the English product announcement in the user prompt, produce section A of the output: A) Spanish Launch Announcement — Write a complete, polished Spanish localization of the announcement. | `anthropic/claude-opus-5` |
 | 2 | Writing | Using the Spanish launch announcement from the previous step, produce sections B, C and D: B) Launch Video Script (Spanish) — 2–3 short sentences of spoken narration for a product launch video. | `anthropic/claude-sonnet-5` |
-| 3 | Voiceover | Generate a spoken Spanish voiceover of the launch video script. | `openai/gpt-4o-mini-tts` |
+| 3 | Voiceover | Voice the section D voiceover script from step 2 as Spanish audio. | `openai/gpt-4o-mini-tts` |
 | 4 | Image | A cinematic global product launch event on a dramatic stage, illuminated by deep blue and gold lighting, with volumetric light beams cutting through a dark auditorium. | `fal_ai/fal-ai/flux/schnell` |
 
 The models are chosen per step by Prompt Tornado's router, so they can change as routing is

@@ -4,6 +4,9 @@ Text output of a production run on 2026-09-21, unedited (total model cost $0.07)
 
 > This run also produced a voiceover and an image, which are not included here. Run the workflow in the demo to hear and see them.
 
+
+**Review note.** In this run the voiceover was cut off: the audio step caps extracted narration at 300 characters, and section D ran to 355, so the spoken audio stops before the final sentence ends. The text below is complete.
+
 ---
 
 📄 Generated Text:

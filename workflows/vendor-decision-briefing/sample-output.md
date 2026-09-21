@@ -4,6 +4,9 @@ Text output of a production run on 2026-09-16, unedited (total model cost $0.58)
 
 > This run also produced an image, which are not included here. Run the workflow in the demo to hear and see them.
 
+
+**Review note.** The memo says Zendesk "offers the most verifiable price ceiling within budget". What was verified is the four-agent seat subtotal ($220–$460 a month before taxes, AI and add-ons); Zendesk's AI allowances and overage pricing were not verified, so total cost against the $500 target stays unverified until a written quote.
+
 ---
 
 🔎 Research Insights:

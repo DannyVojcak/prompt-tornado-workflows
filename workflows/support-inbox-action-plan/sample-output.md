@@ -1,6 +1,9 @@
 # Sample output: Support Inbox Action Plan
 
 Text output of a production run on 2026-09-16, unedited (total model cost $0.12).
+
+**Review note.** Several reply drafts say routing or escalation is already happening ("We're routing this to Engineering", "We're escalating"). The prompt requires every escalation or account change to be presented as a proposed next step, and the workflow takes no external action, so those replies should read as proposals pending human review.
+
 ---
 
 📄 Generated Text:
